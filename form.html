@@ -59,6 +59,11 @@
 
         <br>
 
+        <label for="field-email">Email</label>
+            <input type="email" name="email" id="field-email">
+
+        <br>
+
         <label for="field-melontype">Melon Type
             <select name="melontype" id="field-melontype">
             <!--can we put type= and id= up here too?-->
@@ -75,7 +80,8 @@
         convention. 
         Answer: nope... they can have the same name. User preference.-->
         <label for="field-quantity">Quantity*:</label>
-        <input type="text" name="quantity" id="field-quantity">
+        <!--<input type="text" name="quantity" id="field-quantity">-->
+        0<input type="range" name="quantity" id="field-quantity" min="0" max="25">25
 
         <br>
 
@@ -87,9 +93,21 @@
 
         <br>
 
+        <label for="field-deliverydate">Delivery Date
+            <input type="date" name="deliverydate" id="field-deliverydate">
+        </label>
+
+        <br>
+
         <label for="field-returning">Returning Customer?
             <input type="radio" name="returning" value="yes" id="field-returning">Yes
             <input type="radio" name="returning" value="no" id="field-returning">No
+        </label>
+
+        <br>
+
+        <label for="field-coupon">Coupon Code:
+            <input type="password" name="coupon" id="field-coupon">
         </label>
 
         <br>
