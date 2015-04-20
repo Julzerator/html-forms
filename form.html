@@ -50,15 +50,17 @@
 
     <form action="https:/ubermelon-order-form.herokuapp.com/process" method="POST">
         <label for="field-firstname">First Name</label>
-        <input type="text" name="firstname" id = "field-firstname">
-        <br />
-        <label for="field-lastname">Last Name</label>
-        <input type="text" name="lastname" id = "field-lastname">
+        <input type="text" name="firstname" id="field-firstname">
 
-        <br />
+        <br>
+
+        <label for="field-lastname">Last Name</label>
+        <input type="text" name="lastname" id="field-lastname">
+
+        <br>
 
         <label for="field-melontype">Melon Type
-            <select name="melontype">
+            <select name="melontype" id="field-melontype">
             <!--can we put type= and id= up here too?-->
                 <option value="watermelon">Watermelon</option>
                 <option value="honeydew">Honeydew</option>
@@ -68,13 +70,14 @@
             </select>
         </label>
 
-        <br />
+        <br>
         <!--Does the for="" need the field- or is that a good naming
-        convention. -->
+        convention. 
+        Answer: nope... they can have the same name. User preference.-->
         <label for="field-quantity">Quantity*:</label>
         <input type="text" name="quantity" id="field-quantity">
 
-        <br />
+        <br>
 
         <label for="field-deliverytime">Delivery Time
             <input type="radio" name="time" value="am" id="field-deliverytime">12:00am-12:00pm
@@ -82,14 +85,14 @@
             <input type="radio" name="time" value="wat" id="field-deliverytime">Time is an illusion
         </label>
 
-        <br />
+        <br>
 
         <label for="field-returning">Returning Customer?
             <input type="radio" name="returning" value="yes" id="field-returning">Yes
             <input type="radio" name="returning" value="no" id="field-returning">No
         </label>
 
-        <br />
+        <br>
 
         <label for="field-stats">For Statistical Purposes:
             <input type="checkbox" name="stats" value="dog" id="field-stats">Dog
@@ -99,13 +102,13 @@
             <input type="checkbox" name="stats" value="yak" id="field-stats">Yak
         </label>
 
-        <br />
+        <br>
 
         <label for="submit-button">
             <input type="submit">
         </label>
 
-        <br />
+        <br>
 
     </form>
     <footer>
