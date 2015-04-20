@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ubermelon Order Form</title>
+</head>
+
+<body>
+    <h1>Order Melons NOW!</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Prices</th>
+            </tr>
+            <tr>
+                <th>Melon Name</th>
+                <th>Price per lb</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Watermelon</td>
+                <td>$1.59</td>
+            </tr>
+            
+            <tr>
+                <td>Honeydew</td>
+                <td>$0.99</td>
+            </tr>
+            
+            <tr>
+                <td>Canteloupe</td>
+                <td>$1.29</td>
+            </tr>
+
+            <tr>
+                <td>Crenshaw</td>
+                <td>$2.19</td>
+            </tr>
+
+            <tr>
+                <td>Canary</td>
+                <td>$11.99</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Place your orders here! You know you want to.</p>
+
+    <form action="https:/ubermelon-order-form.herokuapp.com/process" method="POST">
+        <label for="field-firstname">First Name</label>
+        <input type="text" name="firstname" id = "field-firstname">
+        <br />
+        <label for="field-lastname">Last Name</label>
+        <input type="text" name="lastname" id = "field-lastname">
+
+        <br />
+
+        <label for="field-melontype">Melon Type
+            <select name="melontype">
+            <!--can we put type= and id= up here too?-->
+                <option value="watermelon">Watermelon</option>
+                <option value="honeydew">Honeydew</option>
+                <option value="canteloupe">Canteloupe</option>
+                <option value="crenshaw">Crenshaw</option>
+                <option value="canary">Canary</option>
+            </select>
+        </label>
+
+        <br />
+        <!--Does the for="" need the field- or is that a good naming
+        convention. -->
+        <label for="field-quantity">Quantity*:</label>
+        <input type="text" name="quantity" id="field-quantity">
+
+        <br />
+
+        <label for="field-deliverytime">Delivery Time
+            <input type="radio" name="time" value="am" id="field-deliverytime">12:00am-12:00pm
+            <input type="radio" name="time" value="pm" id="field-deliverytime">12:00pm-12:00am 
+            <input type="radio" name="time" value="wat" id="field-deliverytime">Time is an illusion
+        </label>
+
+        <br />
+
+        <label for="field-returning">Returning Customer?
+            <input type="radio" name="returning" value="yes" id="field-returning">Yes
+            <input type="radio" name="returning" value="no" id="field-returning">No
+        </label>
+
+        <br />
+
+        <label for="field-stats">For Statistical Purposes:
+            <input type="checkbox" name="stats" value="dog" id="field-stats">Dog
+            <input type="checkbox" name="stats" value="cat" id="field-stats">Cat
+            <input type="checkbox" name="stats" value="hedgehog" id="field-stats">Hedgehog
+            <input type="checkbox" name="stats" value="balloonicorn" id="field-stats">**Balloonicorn**
+            <input type="checkbox" name="stats" value="yak" id="field-stats">Yak
+        </label>
+
+        <br />
+
+        <label for="submit-button">
+            <input type="submit">
+        </label>
+
+        <br />
+
+    </form>
+    <footer>
+        <p>*Quantities given are by the flat.</p>
+        <p>**Balloonicorns get love</p>
+    </footer>
+
+
+
+</body>
+</html>
